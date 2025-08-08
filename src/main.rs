@@ -1,7 +1,7 @@
 use constants_proc_macro::constants;
 
 // Works
-constants!(8478);
+constants!(8479);
 // stack-overflow and rust-analyzer hangs
 // constants!(8479);
 
