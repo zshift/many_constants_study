@@ -5,6 +5,8 @@ This repo was inspired by [this post on reddit](https://www.reddit.com/r/rust/co
 There's unusual behavior that lines up between rust-analyzer and compiled rust binaries when there are greater than ~8478 constants.
 Rust-analyzer and a compiled binary that iterates over a const array of 8478 constants both work correctly, albeit rust-analyzer takes a couple of seconds to finish indexing the constants on VSCode. When I bump this to 8479 constants, rust-analyzer appears to hang indefinitely, and running the compiled code will throw a stack-overflow exception.
 
+Interestingly, when piping to a file, there's no stack overflow. 
+
 When run at 8478
 ```bash
 > cargo run
@@ -28,11 +30,16 @@ error: process didn't exit successfully: `target\debug\many_constants_study.exe`
 ```
 
 This was run on a system with the following specifications:
+- OS: Windows 11 Pro 24H2
+- CPU: 9800X3D
+- RAM: 64GB
+- Rust version: 1.88.0 stable
 
-OS: Windows 11 Pro 24H2
 
-CPU: 9800X3D
-
-RAM: 64GB
-
-Rust version: 1.88.0 stable
+You can run my examples with `just`, installed via `cargo install just`
+- `just run_8478` -- runs
+- `just run_8479` -- crashes
+- `just out_8478` -- runs
+- `just out_8479` -- runs
+- `just expand_8478`
+- `just expand_8479`

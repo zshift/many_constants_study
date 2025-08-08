@@ -8,3 +8,8 @@ constants_proc_macro = { path = "constants_proc_macro" }
 
 [workspace]
 members = ["constants_proc_macro"]
+
+[features]
+default = ["consts_8478"]
+consts_8478 = []
+consts_8479 = []
