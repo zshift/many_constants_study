@@ -2,7 +2,7 @@ use constants_proc_macro::constants;
 
 // Works
 #[cfg(feature = "consts_8478")]
-constants!(8479);
+constants!(8478);
 
 // stack-overflow and rust-analyzer hangs
 #[cfg(feature = "consts_8479")]
