@@ -1,0 +1,10 @@
+[package]
+name = "many_constants_study"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+constants_proc_macro = { path = "constants_proc_macro" }
+
+[workspace]
+members = ["constants_proc_macro"]
