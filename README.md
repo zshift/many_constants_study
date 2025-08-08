@@ -28,7 +28,11 @@ error: process didn't exit successfully: `target\debug\many_constants_study.exe`
 ```
 
 This was run on a system with the following specifications:
+
 OS: Windows 11 Pro 24H2
+
 CPU: 9800X3D
+
 RAM: 64GB
+
 Rust version: 1.88.0 stable
